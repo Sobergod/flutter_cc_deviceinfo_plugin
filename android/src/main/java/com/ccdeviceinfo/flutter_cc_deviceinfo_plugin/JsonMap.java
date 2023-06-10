@@ -1,4 +1,6 @@
 package com.ccdeviceinfo.flutter_cc_deviceinfo_plugin;
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,6 +35,7 @@ public class JsonMap {
             }
             return valueMap;
         } catch (JSONException e) {
+            Log.d("1",e.toString());
             e.printStackTrace();
         }
 

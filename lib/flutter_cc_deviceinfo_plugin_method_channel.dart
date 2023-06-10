@@ -67,4 +67,18 @@ class MethodChannelFlutterCcDeviceinfoPlugin
         .invokeMethod<Map<dynamic, dynamic>>('getMediaFilesData');
     return version;
   }
+
+  @override
+  Future<Map<dynamic, dynamic>?> getBatteryStatusData() async {
+    final version = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getBatteryStatusData');
+    return version;
+  }
+
+  @override
+  Future<Map<dynamic, dynamic>?> getNetWorkData() async {
+    final version = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getNetWorkData');
+    return version;
+  }
 }

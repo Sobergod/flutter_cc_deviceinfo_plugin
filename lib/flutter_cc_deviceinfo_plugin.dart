@@ -5,8 +5,8 @@ class FlutterCcDeviceinfoPlugin {
     return FlutterCcDeviceinfoPluginPlatform.instance.getAESUtil(data, key);
   }
 
-  Future<String?> setGzip(String data, String key) {
-    return FlutterCcDeviceinfoPluginPlatform.instance.getAESUtil(data, key);
+  Future<String?> setGzip(String data) {
+    return FlutterCcDeviceinfoPluginPlatform.instance.setGzip(data);
   }
 
   Future<Map<dynamic, dynamic>?> getGeneralData() {
@@ -31,5 +31,13 @@ class FlutterCcDeviceinfoPlugin {
 
   Future<Map<dynamic, dynamic>?> getMediaFilesData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getMediaFilesData();
+  }
+
+  Future<Map<dynamic, dynamic>?> getBatteryStatusData() {
+    return FlutterCcDeviceinfoPluginPlatform.instance.getBatteryStatusData();
+  }
+
+  Future<Map<dynamic, dynamic>?> getNetWorkData() {
+    return FlutterCcDeviceinfoPluginPlatform.instance.getNetWorkData();
   }
 }

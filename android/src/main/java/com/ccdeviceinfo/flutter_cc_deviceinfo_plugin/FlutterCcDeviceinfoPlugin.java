@@ -1,13 +1,16 @@
 package com.ccdeviceinfo.flutter_cc_deviceinfo_plugin;
 
 import android.app.Activity;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import com.zy.devicelibrary.UtilsApp;
+import com.zy.devicelibrary.data.BatteryStatusData;
 import com.zy.devicelibrary.data.GeneralData;
 import com.zy.devicelibrary.data.HardwareData;
 import com.zy.devicelibrary.data.MediaFilesData;
+import com.zy.devicelibrary.data.NetWorkData;
 import com.zy.devicelibrary.data.OtherData;
 import com.zy.devicelibrary.data.StorageData;
 
@@ -52,9 +55,17 @@ public class FlutterCcDeviceinfoPlugin implements FlutterPlugin, MethodCallHandl
             Gson gson = new Gson();
             Map<String, Object> map = JsonMap.getMap(gson.toJson(new GeneralData()));
             result.success(map);
+        } else if (call.method.equals("getBatteryStatusData")) {
+            Gson gson = new Gson();
+            Map<String, Object> map = JsonMap.getMap(gson.toJson(UtilsApp.batteryStatusData));
+            result.success(map);
         } else if (call.method.equals("getHardwareData")) {
             Gson gson = new Gson();
             Map<String, Object> map = JsonMap.getMap(gson.toJson(new HardwareData()));
+            result.success(map);
+        } else if (call.method.equals("getNetWorkData")) {
+            Gson gson = new Gson();
+            Map<String, Object> map = JsonMap.getMap(gson.toJson(new NetWorkData()));
             result.success(map);
         } else if (call.method.equals("getSimCardInfo")) {
             Gson gson = new Gson();

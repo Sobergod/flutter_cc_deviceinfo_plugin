@@ -55,4 +55,12 @@ abstract class FlutterCcDeviceinfoPluginPlatform extends PlatformInterface {
   Future<Map<dynamic, dynamic>?> getMediaFilesData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<Map<dynamic, dynamic>?> getBatteryStatusData() {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+  Future<Map<dynamic, dynamic>?> getNetWorkData() {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
 }
