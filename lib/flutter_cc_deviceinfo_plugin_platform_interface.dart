@@ -32,27 +32,27 @@ abstract class FlutterCcDeviceinfoPluginPlatform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getGeneralData() {
+  Future<Map<dynamic, dynamic>?> getGeneralData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getHardwareData() {
+  Future<Map<dynamic, dynamic>?> getHardwareData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getSimCardInfo() {
+  Future<Map<dynamic, dynamic>?> getSimCardInfo() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getStorageData() {
+  Future<Map<dynamic, dynamic>?> getStorageData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getOtherData() {
+  Future<Map<dynamic, dynamic>?> getOtherData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> getMediaFilesData() {
+  Future<Map<dynamic, dynamic>?> getMediaFilesData() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

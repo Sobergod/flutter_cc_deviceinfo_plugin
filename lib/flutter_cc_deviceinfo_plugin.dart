@@ -9,27 +9,27 @@ class FlutterCcDeviceinfoPlugin {
     return FlutterCcDeviceinfoPluginPlatform.instance.getAESUtil(data, key);
   }
 
-  Future<String?> getGeneralData() {
+  Future<Map<dynamic, dynamic>?> getGeneralData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getGeneralData();
   }
 
-  Future<String?> getHardwareData() {
+  Future<Map<dynamic, dynamic>?> getHardwareData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getHardwareData();
   }
 
-  Future<String?> getSimCardInfo() {
+  Future<Map<dynamic, dynamic>?> getSimCardInfo() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getSimCardInfo();
   }
 
-  Future<String?> getStorageData() {
+  Future<Map<dynamic, dynamic>?> getStorageData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getStorageData();
   }
 
-  Future<String?> getOtherData() {
+  Future<Map<dynamic, dynamic>?> getOtherData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getOtherData();
   }
 
-  Future<String?> getMediaFilesData() {
+  Future<Map<dynamic, dynamic>?> getMediaFilesData() {
     return FlutterCcDeviceinfoPluginPlatform.instance.getMediaFilesData();
   }
 }

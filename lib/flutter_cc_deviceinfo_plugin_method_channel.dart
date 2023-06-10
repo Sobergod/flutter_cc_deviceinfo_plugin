@@ -26,41 +26,45 @@ class MethodChannelFlutterCcDeviceinfoPlugin
   }
 
   @override
-  Future<String?> getGeneralData() async {
-    final data = await methodChannel.invokeMethod<String>('getGeneralData');
+  Future<Map<dynamic, dynamic>?> getGeneralData() async {
+    final data = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getGeneralData');
     return data;
   }
 
   @override
-  Future<String?> getHardwareData() async {
-    final data = await methodChannel.invokeMethod<String>('getHardwareData');
+  Future<Map<dynamic, dynamic>?> getHardwareData() async {
+    final data = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getHardwareData');
     return data;
   }
 
   @override
-  Future<String?> getSimCardInfo() async {
-    final data = await methodChannel.invokeMethod<String>('getSimCardInfo');
+  Future<Map<dynamic, dynamic>?> getSimCardInfo() async {
+    final data = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getSimCardInfo');
     return data;
   }
 
   @override
-  Future<String?> getStorageData() async {
-    final version = await methodChannel.invokeMethod<String>('getStorageData');
+  Future<Map<dynamic, dynamic>?> getStorageData() async {
+    final version = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getStorageData');
     return version;
   }
 
   @override
-  Future<String?> getOtherData() async {
-    final version = await methodChannel.invokeMethod<String>(
+  Future<Map<dynamic, dynamic>?> getOtherData() async {
+    final version = await methodChannel.invokeMethod<Map<dynamic, dynamic>>(
       'getOtherData',
     );
     return version;
   }
 
   @override
-  Future<String?> getMediaFilesData() async {
-    final version =
-        await methodChannel.invokeMethod<String>('getMediaFilesData');
+  Future<Map<dynamic, dynamic>?> getMediaFilesData() async {
+    final version = await methodChannel
+        .invokeMethod<Map<dynamic, dynamic>>('getMediaFilesData');
     return version;
   }
 }

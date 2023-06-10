@@ -34,6 +34,24 @@ class _MyAppState extends State<MyApp> {
       platformVersion = await _flutterCcDeviceinfoPlugin.getAESUtil(
               "123", 'eb85317b657f3ab2520ebbed3903166d') ??
           'Unknown platform version';
+      Map<dynamic, dynamic>? a =
+          await _flutterCcDeviceinfoPlugin.getHardwareData();
+      Map<dynamic, dynamic>? a1 =
+          await _flutterCcDeviceinfoPlugin.getGeneralData();
+      Map<dynamic, dynamic>? a2 =
+          await _flutterCcDeviceinfoPlugin.getMediaFilesData();
+      Map<dynamic, dynamic>? a3 =
+          await _flutterCcDeviceinfoPlugin.getOtherData();
+      Map<dynamic, dynamic>? a4 =
+          await _flutterCcDeviceinfoPlugin.getSimCardInfo();
+      Map<dynamic, dynamic>? a5 =
+          await _flutterCcDeviceinfoPlugin.getStorageData();
+      print(a);
+      print(a1);
+      print(a2);
+      print(a3);
+      print(a4);
+      print(a5);
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

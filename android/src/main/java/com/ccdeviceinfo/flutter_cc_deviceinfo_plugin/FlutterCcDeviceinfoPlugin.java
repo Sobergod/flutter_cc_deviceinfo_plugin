@@ -62,9 +62,7 @@ public class FlutterCcDeviceinfoPlugin implements FlutterPlugin, MethodCallHandl
             result.success(map);
         } else if (call.method.equals("getStorageData")) {
             Gson gson = new Gson();
-            Map<String, Object> map = JsonMap.getMap(gson.toJson(StorageQueryUtil.queryWithStorageManager(
-                    new StorageData()
-            )));
+            Map<String, Object> map = JsonMap.getMap(gson.toJson(new StorageData()));
             result.success(map);
         } else if (call.method.equals("getOtherData")) {
             Gson gson = new Gson();
